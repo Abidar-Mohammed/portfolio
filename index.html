@@ -1,95 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Mohammed Abidar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohammed Abidar — Portfolio</title>
+  <meta name="description" content="Portfolio de Mohammed Abidar — Data Scientist junior (CentraleSupélec). ML, NLP, Computer Vision, Big Data." />
+  <meta property="og:title" content="Mohammed Abidar — Portfolio" />
+  <meta property="og:description" content="Data Scientist junior (CentraleSupélec). ML, NLP, Computer Vision, Big Data." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:;base64,=" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="#home">Accueil</a>
-    <a href="#about">À propos</a>
-    <a href="#experience">Expériences</a>
-    <a href="#projects">Projets</a>
-    <a href="#skills">Compétences</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#home" class="brand">MA</a>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#experience">Expériences</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Basculer thème">🌙</button>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <img src="BodyEditor_20241224_145821203.jpg" alt="Mohammed Abidar" class="profile-pic">
-    <h1>Mohammed Abidar</h1>
-    <h2>Data Scientist Junior</h2>
-    <p>Passionné par la Data Science, l’IA et la Supply Chain</p>
-    <img src="42089906_8957993.jpg" alt="InkDino" class="mascotte">
+    <div class="hero-inner">
+      <h1 class="title">Mohammed Abidar</h1>
+      <p class="subtitle">Data Scientist junior — CentraleSupélec</p>
+      <p class="tagline">ML · NLP · Computer Vision · Big Data</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Voir mes projets</a>
+        <a class="btn ghost" href="#contact">Me contacter</a>
+      </div>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2>À propos</h2>
-    <p>Étudiant ingénieur en dernière année à CentraleSupélec, spécialisé en Data Science et Intelligence Artificielle. 
-       Fort de mes expériences en Machine Learning, NLP, Computer Vision et Big Data, j’ai développé des solutions innovantes 
-       mêlant prédiction et optimisation. Je recherche un CDI en tant que Data Scientist junior.</p>
+    <div class="container">
+      <h2 class="section-title">À propos</h2>
+      <p class="lead">
+        Étudiant ingénieur en dernière année à CentraleSupélec, spécialisé en Data Science & IA.
+        Expériences en Machine Learning, NLP, Computer Vision et Big Data avec une approche produit (prédiction, optimisation, dashboards).
+        Je recherche un CDI en tant que <strong>Data Scientist junior</strong>.
+      </p>
+    </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <h2>Expériences</h2>
-    <div class="card">
-      <h3>Renault – Stage Data Scientist (2025)</h3>
-      <p>Analyse des données véhicules électriques, développement de modèles prédictifs (température moteur), 
-         dashboards interactifs pour équipes techniques.</p>
-    </div>
-    <div class="card">
-      <h3>KPMG – Projet Data Scientist RAG ESG Supply Chain (2024-2025)</h3>
-      <p>Conception d’un système RAG ESG, ingestion multi-sources, embeddings vectoriels, génération de rapports traçables.</p>
-    </div>
-    <div class="card">
-      <h3>Idus Capital – Analyste Données Financières (2024)</h3>
-      <p>Automatisation pipelines ETL, modèles prédictifs pour évaluer opportunités d’investissement, visualisations Power BI.</p>
-    </div>
-    <div class="card">
-      <h3>Agence Nationale des Ports (2023)</h3>
-      <p>Dashboards Power BI pour logistique portuaire, optimisation des flux, réduction délais de 15%.</p>
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Expériences</h2>
+
+      <div class="timeline">
+        <article class="timeline-item fade">
+          <div class="time">Avr 2025 — Août 2025 · Paris</div>
+          <h3>Renault — Stage Data Scientist (Données Véhicules Électriques)</h3>
+          <ul>
+            <li>Exploitation de données VE via GCP : extraction, nettoyage et structuration à grande échelle.</li>
+            <li>Analyse des performances moteur & agrément de conduite (données embarquées réelles).</li>
+            <li>Modèles prédictifs pour estimer la température moteur (stator/rotor) sur séries temporelles.</li>
+            <li>Dashboards (Python, Spotfire, Looker Studio) pour KPIs techniques & produit.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item fade">
+          <div class="time">Oct 2024 — Avr 2025 · Paris</div>
+          <h3>KPMG — Projet Data Scientist (RAG ESG Supply Chain)</h3>
+          <ul>
+            <li>Conception d’un système RAG pour évaluer la conformité ESG (CSRD, CSDDD, GRI).</li>
+            <li>Ingestion multi-sources (PDF, web, API), chunking, embeddings & indexation vectorielle.</li>
+            <li>Réponses traçables avec citations + score de risque par fournisseur, alertes & dashboards.</li>
+            <li>Déploiement CI/CD, qualité des réponses & monitoring des embeddings.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item fade">
+          <div class="time">Avr 2024 — Août 2024 · Casablanca</div>
+          <h3>Idus Capital — Stagiaire Analyste de Données Financières</h3>
+          <ul>
+            <li>Automatisation de pipelines ETL multi-sources et volumétrie élevée.</li>
+            <li>Modèles prédictifs pour opportunités d’investissement & signaux de risque.</li>
+            <li>Analyses statistiques & visualisations Power BI pour la décision métier.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item fade">
+          <div class="time">Juin 2023 — Sep 2023 · Agadir</div>
+          <h3>Agence Nationale des Ports — Stagiaire BI & Reporting</h3>
+          <ul>
+            <li>Dashboards Power BI pour performances logistiques portuaires.</li>
+            <li>Analyse de goulots d’étranglement (-15% sur délais).</li>
+            <li>Recommandations pour optimiser les flux opérationnels.</li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
-    <h2>Projets</h2>
-    <div class="grid">
-      <div class="card">Prédiction Température Moteur – Séries temporelles (Python, PyTorch)</div>
-      <div class="card">Système RAG ESG – NLP & LangChain</div>
-      <div class="card">Analyse Financière – Pipelines ETL & Modèles prédictifs</div>
-      <div class="card">Dashboards Logistique – Power BI & Big Data</div>
+    <div class="container">
+      <h2 class="section-title">Projets</h2>
+
+      <div class="grid">
+        <a class="card lift fade" href="#" target="_blank" rel="noopener">
+          <h3>Prédiction Température Moteur</h3>
+          <p>Séries temporelles (PyTorch). Estimation stator/rotor, features mécaniques, éval RMSE.</p>
+          <span class="pill">Python</span><span class="pill">PyTorch</span><span class="pill">Timeseries</span>
+        </a>
+
+        <a class="card lift fade" href="#" target="_blank" rel="noopener">
+          <h3>Système RAG ESG</h3>
+          <p>Pipeline ingestion + embeddings + recherche sémantique + réponses citables.</p>
+          <span class="pill">NLP</span><span class="pill">LangChain</span><span class="pill">RAG</span>
+        </a>
+
+        <a class="card lift fade" href="#" target="_blank" rel="noopener">
+          <h3>ETL & Analyse Financière</h3>
+          <p>Pipelines automatisés, scoring de risque, visualisations pour l’investissement.</p>
+          <span class="pill">ETL</span><span class="pill">Power BI</span><span class="pill">SQL</span>
+        </a>
+
+        <a class="card lift fade" href="#" target="_blank" rel="noopener">
+          <h3>Logistique Portuaire</h3>
+          <p>Tableaux de bord KPIs & recommandations d’optimisation (-15% délais).</p>
+          <span class="pill">Power BI</span><span class="pill">Data Viz</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2>Compétences</h2>
-    <ul>
-      <li><strong>Programmation :</strong> Python, SQL, R, PyTorch, TensorFlow, Scikit-learn</li>
-      <li><strong>Data :</strong> ETL, BigQuery, MySQL, GCP</li>
-      <li><strong>IA :</strong> NLP, Computer Vision, RAG, Transformers, LLMs</li>
-      <li><strong>Visualisation :</strong> Power BI, Tableau, Spotfire, Matplotlib, Plotly</li>
-      <li><strong>Management :</strong> Agile Scrum, Git</li>
-    </ul>
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Compétences</h2>
+      <div class="skills">
+        <div>
+          <h4>Programmation</h4>
+          <p>Python (PyTorch, TensorFlow, Pandas, NumPy, scikit-learn, PySpark), SQL, R</p>
+        </div>
+        <div>
+          <h4>IA & ML</h4>
+          <p>NLP, Computer Vision, CNN/RNN/Transformers, LLMs, RAG, Fine-tuning</p>
+        </div>
+        <div>
+          <h4>Données & Cloud</h4>
+          <p>ETL, MySQL, BigQuery, GCP, traitement de données massives</p>
+        </div>
+        <div>
+          <h4>Visualisation</h4>
+          <p>Power BI, Tableau, Matplotlib, Plotly, Spotfire, Looker Studio</p>
+        </div>
+        <div>
+          <h4>Méthodo</h4>
+          <p>Agile (Scrum), Git, CI/CD</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email : <a href="mailto:mohammed.abidar@student-cs.fr">mohammed.abidar@student-cs.fr</a></p>
-    <p>Téléphone : +33 7 63 18 18 11</p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/mohammed-abidar-77858720a/" target="_blank">Mon profil</a></p>
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <a class="contact-card lift" href="mailto:mohammed.abidar@student-cs.fr">✉️ Email</a>
+        <a class="contact-card lift" href="tel:+33763181811">📞 Téléphone</a>
+        <a class="contact-card lift" href="https://www.linkedin.com/in/mohammed-abidar-77858720a/" target="_blank" rel="noopener">💼 LinkedIn</a>
+      </div>
+      <p class="footnote">Basé à Paris · Ouvert aux opportunités Data Science (CDI)</p>
+    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Mohammed Abidar</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Mohammed Abidar · Tous droits réservés</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
