@@ -7,74 +7,91 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <img src="BodyEditor_20241224_145821203.jpg" alt="Photo Mohammed Abidar" class="profile-pic">
-    <h1>Mohammed Abidar</h1>
-    <p>Étudiant ingénieur · Data Science & Business · Passionné par l’IA et la supply chain</p>
-    <img src="42089906_8957993.jpg" alt="InkDino" class="mascotte">
-  </header>
-
   <!-- NAVBAR -->
-  <nav>
+  <nav class="navbar">
+    <a href="#home">Accueil</a>
     <a href="#about">À propos</a>
     <a href="#experience">Expériences</a>
-    <a href="#formation">Formations</a>
+    <a href="#projects">Projets</a>
+    <a href="#skills">Compétences</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- SECTIONS -->
-  <section id="about">
-    <h2>À propos</h2>
-    <p>Je suis étudiant ingénieur passionné par la data science, l’intelligence artificielle et la transformation digitale. 
-       Mon objectif est de développer des solutions innovantes dans le domaine du business et de la supply chain.</p>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <img src="BodyEditor_20241224_145821203.jpg" alt="Mohammed Abidar" class="profile-pic">
+    <h1>Mohammed Abidar</h1>
+    <h2>Data Scientist Junior</h2>
+    <p>Passionné par la Data Science, l’IA et la Supply Chain</p>
+    <img src="42089906_8957993.jpg" alt="InkDino" class="mascotte">
   </section>
 
-  <section id="experience">
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>À propos</h2>
+    <p>Étudiant ingénieur en dernière année à CentraleSupélec, spécialisé en Data Science et Intelligence Artificielle. 
+       Fort de mes expériences en Machine Learning, NLP, Computer Vision et Big Data, j’ai développé des solutions innovantes 
+       mêlant prédiction et optimisation. Je recherche un CDI en tant que Data Scientist junior.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
     <h2>Expériences</h2>
     <div class="card">
-      <h3>Stagiaire Data Scientist – Renault</h3>
-      <p>Analyse et structuration des données liées à la mobilité et aux émissions de CO2. Développement de dashboards interactifs pour visualiser l’impact des Zones à Faibles Émissions.</p>
-      <small>2025</small>
+      <h3>Renault – Stage Data Scientist (2025)</h3>
+      <p>Analyse des données véhicules électriques, développement de modèles prédictifs (température moteur), 
+         dashboards interactifs pour équipes techniques.</p>
     </div>
     <div class="card">
-      <h3>Stagiaire Analyste – KPMG</h3>
-      <p>Développement de KPIs et dashboards Power BI pour piloter la transformation digitale interne (offboarding, automatisation, OKR).</p>
-      <small>2025</small>
+      <h3>KPMG – Projet Data Scientist RAG ESG Supply Chain (2024-2025)</h3>
+      <p>Conception d’un système RAG ESG, ingestion multi-sources, embeddings vectoriels, génération de rapports traçables.</p>
+    </div>
+    <div class="card">
+      <h3>Idus Capital – Analyste Données Financières (2024)</h3>
+      <p>Automatisation pipelines ETL, modèles prédictifs pour évaluer opportunités d’investissement, visualisations Power BI.</p>
+    </div>
+    <div class="card">
+      <h3>Agence Nationale des Ports (2023)</h3>
+      <p>Dashboards Power BI pour logistique portuaire, optimisation des flux, réduction délais de 15%.</p>
     </div>
   </section>
 
-  <section id="formation">
-    <h2>Formations</h2>
-    <div class="card">
-      <h3>CentraleSupélec</h3>
-      <p>Cycle ingénieur, spécialisation Supply Chain & Data Science.</p>
-    </div>
-    <div class="card">
-      <h3>ESSEC Business School</h3>
-      <p>Année d’échange orientée management et business.</p>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projets</h2>
+    <div class="grid">
+      <div class="card">Prédiction Température Moteur – Séries temporelles (Python, PyTorch)</div>
+      <div class="card">Système RAG ESG – NLP & LangChain</div>
+      <div class="card">Analyse Financière – Pipelines ETL & Modèles prédictifs</div>
+      <div class="card">Dashboards Logistique – Power BI & Big Data</div>
     </div>
   </section>
 
-  <section id="contact">
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>Compétences</h2>
+    <ul>
+      <li><strong>Programmation :</strong> Python, SQL, R, PyTorch, TensorFlow, Scikit-learn</li>
+      <li><strong>Data :</strong> ETL, BigQuery, MySQL, GCP</li>
+      <li><strong>IA :</strong> NLP, Computer Vision, RAG, Transformers, LLMs</li>
+      <li><strong>Visualisation :</strong> Power BI, Tableau, Spotfire, Matplotlib, Plotly</li>
+      <li><strong>Management :</strong> Agile Scrum, Git</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email : <a href="mailto:mohammed.abidar@example.com">mohammed.abidar@example.com</a></p>
+    <p>Email : <a href="mailto:mohammed.abidar@student-cs.fr">mohammed.abidar@student-cs.fr</a></p>
+    <p>Téléphone : +33 7 63 18 18 11</p>
     <p>LinkedIn : <a href="https://www.linkedin.com/in/mohammed-abidar-77858720a/" target="_blank">Mon profil</a></p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Mohammed Abidar. Tous droits réservés.</p>
+    <p>&copy; 2025 Mohammed Abidar</p>
   </footer>
 
-  <!-- BOUTON MODE SOMBRE -->
-  <button onclick="toggleTheme()" class="dark-btn">🌙 Mode Sombre</button>
-
-  <!-- SCRIPT -->
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
