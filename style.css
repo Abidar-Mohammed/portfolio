@@ -39,6 +39,19 @@ body{
 }
 
 /* HERO */
+.hero .profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+  border: 3px solid var(--line);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.hero .profile-pic:hover {
+  transform: scale(1.05);
+}
 .hero{
   min-height:90vh; display:grid; place-items:center; text-align:center;
   background: radial-gradient(800px 400px at 50% 10%, #1a2040 0%, transparent 60%),
@@ -125,3 +138,4 @@ body{
 }
 body.light .nav{ background: rgba(255,255,255,.7) }
 body.light .btn.ghost{ color:#141821 }
+
