@@ -38,19 +38,29 @@ body{
   color:#fff; border-radius:10px; padding:6px 10px;
 }
 
-/* HERO */
-.hero .profile-pic {
-  width: 90px;          /* largeur réduite */
-  height: 90px;         /* hauteur réduite */
-  border-radius: 50%;   /* rend l'image parfaitement ronde */
-  object-fit: cover;    /* garde un bon cadrage */
-  margin-bottom: 14px;
-  border: 2px solid var(--line);   /* bordure fine */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease;
+.hero {
+  min-height: 100vh;              /* occupe tout l'écran */
+  display: flex;
+  justify-content: center;        /* centre horizontalement */
+  align-items: center;            /* centre verticalement */
+  flex-direction: column;         /* empile la photo, nom, texte */
+  text-align: center;
+  background: linear-gradient(to bottom, #0f1115, #141821);
 }
+
+.hero .profile-pic {
+  width: 120px;                   /* taille moyenne */
+  height: 120px;
+  border-radius: 50%;             /* ronde */
+  object-fit: cover;              /* coupe bien */
+  margin-bottom: 20px;
+  border: 3px solid var(--line);  /* contour fin */
+  box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
 .hero .profile-pic:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);         /* petit effet au survol */
 }
 }
 .hero{
@@ -139,5 +149,6 @@ body{
 }
 body.light .nav{ background: rgba(255,255,255,.7) }
 body.light .btn.ghost{ color:#141821 }
+
 
 
