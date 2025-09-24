@@ -13,10 +13,34 @@
 </head>
 <body>
 
-  <!-- HERO (gardée) -->
+  <!-- NAVBAR with icons -->
+  <header class="nav">
+    <a href="#home" class="brand" aria-label="Aller à l'accueil">MA</a>
+    <nav>
+      <a href="#home" class="nav-link" aria-label="Profil">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+        <span>Profil</span>
+      </a>
+      <a href="#experience" class="nav-link" aria-label="Expériences">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M10 4h4v2h5v6H5V6h5V4zm-5 8h14v8H5v-8zm4 2v2h6v-2H9z"/></svg>
+        <span>Expériences</span>
+      </a>
+      <a href="#projects" class="nav-link" aria-label="Projets">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+        <span>Projets</span>
+      </a>
+      <a href="#contact" class="nav-link" aria-label="Contact">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.9 0-10 2-10 6v2h20v-2c0-4-6.1-6-10-6z"/></svg>
+        <span>Contact</span>
+      </a>
+      <button id="theme-toggle" class="theme-btn" aria-label="Basculer thème">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-inner">
-      <img src="me.jpg" alt="Mohammed Abidar" class="profile-pic" />
+    <div class="hero-inner fade">
+      <img src="photo.jpg" alt="Mohammed Abidar" class="profile-pic" />
       <h1 class="title">Mohammed Abidar</h1>
       <p class="subtitle">Data Scientist junior — CentraleSupélec</p>
       <p class="tagline">ML · NLP · Computer Vision · Big Data</p>
@@ -31,7 +55,7 @@
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">À propos</h2>
-      <p class="lead">
+      <p class="lead fade">
         Étudiant ingénieur en dernière année à CentraleSupélec, spécialisé en Data Science & IA.
         Expériences en Machine Learning, NLP, Computer Vision et Big Data avec une approche produit (prédiction, optimisation, dashboards).
         Je recherche un CDI en tant que <strong>Data Scientist junior</strong>.
@@ -39,135 +63,145 @@
     </div>
   </section>
 
- <!-- EXPERIENCE -->
-<section id="experience" class="section alt">
-  <div class="container">
-    <h2 class="section-title">Expériences</h2>
-
-    <div class="exp-list">
-
-      <!-- Renault -->
-      <article class="exp-card fade">
-        <img class="exp-logo" src="renault.jpg" alt="Renault Group logo" />
-        <div class="exp-body">
-          <h3>Data Scientist — Internship <span class="exp-company">Renault Group</span></h3>
-          <p class="exp-meta">Avr 2025 – Présent · 6 mois · Paris, Île-de-France · Hybrid</p>
-          <p class="exp-tags">LLM · Time Series Forecasting · ML</p>
-          <ul>
-            <li>Données VE via GCP : extraction, nettoyage, structuration à grande échelle.</li>
-            <li>Modèles prédictifs pour températures stator/rotor (séries temporelles).</li>
-            <li>Dashboards de suivi KPIs (Python, Spotfire, Looker Studio).</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- KPMG -->
-      <article class="exp-card fade">
-        <img class="exp-logo" src="kpmg.jpg" alt="KPMG logo" />
-        <div class="exp-body">
-          <h3>AI & ESG Project Consultant <span class="exp-company">KPMG</span></h3>
-          <p class="exp-meta">Sep 2024 – Fév 2025 · 6 mois · Paris, France</p>
-          <p class="exp-tags">RAG · NLP · ESG</p>
-          <ul>
-            <li>Développement d’une solution RAG pour l’évaluation ESG (CSRD, CSDDD, GRI).</li>
-            <li>Ingestion multi-sources, embeddings, indexation vectorielle, réponses traçables.</li>
-            <li>CI/CD, qualité des réponses, monitoring de la dérive des embeddings.</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Idus Capital -->
-      <article class="exp-card fade">
-        <img class="exp-logo" src="idus.jpg" alt="Idus Capital logo" />
-        <div class="exp-body">
-          <h3>Data Scientist-engineer — Internship <span class="exp-company">Idus Capital</span></h3>
-          <p class="exp-meta">Avr 2024 – Sep 2024 · 6 mois · Casablanca</p>
-          <p class="exp-tags">Python · SQL · ETL</p>
-          <ul>
-            <li>Pipelines ETL automatisés sur données financières volumineuses.</li>
-            <li>Modèles prédictifs pour opportunités d’investissement & signaux de risque.</li>
-            <li>Analyses & visualisations (Power BI) pour les métiers.</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- ANP -->
-      <article class="exp-card fade">
-        <img class="exp-logo" src="anp.png" alt="Agence Nationale des Ports logo" />
-        <div class="exp-body">
-          <h3>Data analyst <span class="exp-company">Agence Nationale des Ports</span></h3>
-          <p class="exp-meta">Juin 2023 – Sep 2023 · 4 mois · Agadir, Maroc</p>
-          <p class="exp-tags">SQL · Power BI · KPI</p>
-          <ul>
-            <li>Dashboards Power BI pour performances logistiques portuaires.</li>
-            <li>Analyse des goulots d’étranglement (-15% de délais).</li>
-            <li>Recommandations d’optimisation des flux.</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section alt">
     <div class="container">
-      <h2 class="section-title">Projets</h2>
+      <h2 class="section-title">Expériences</h2>
 
-      <div class="grid">
-        <a class="card lift fade" href="#" target="_blank" rel="noopener">
-          <h3>Prédiction Température Moteur</h3>
-          <p>Séries temporelles (PyTorch). Estimation stator/rotor, features mécaniques, éval RMSE.</p>
-          <span class="pill">Python</span><span class="pill">PyTorch</span><span class="pill">Timeseries</span>
-        </a>
+      <div class="exp-list">
 
-        <a class="card lift fade" href="#" target="_blank" rel="noopener">
-          <h3>Système RAG ESG</h3>
-          <p>Pipeline ingestion + embeddings + recherche sémantique + réponses citables.</p>
-          <span class="pill">NLP</span><span class="pill">LangChain</span><span class="pill">RAG</span>
-        </a>
+        <!-- Renault -->
+        <article class="exp-card fade">
+          <img class="exp-logo" src="renault.png" alt="Renault Group" onerror="this.style.display='none'">
+          <div class="exp-body">
+            <h3>Data Scientist — Internship <span class="exp-company">Renault Group</span></h3>
+            <p class="exp-meta">Avr 2025 – Présent · 6 mois · Paris, Île-de-France · Hybrid</p>
+            <p class="exp-tags">LLM · Time Series Forecasting · ML</p>
+            <ul>
+              <li>Données VE via GCP : extraction, nettoyage, structuration à grande échelle.</li>
+              <li>Modèles prédictifs température stator/rotor (séries temporelles).</li>
+              <li>Dashboards KPIs (Python, Spotfire, Looker Studio).</li>
+            </ul>
+          </div>
+        </article>
 
-        <a class="card lift fade" href="#" target="_blank" rel="noopener">
-          <h3>ETL & Analyse Financière</h3>
-          <p>Pipelines automatisés, scoring de risque, visualisations pour l’investissement.</p>
-          <span class="pill">ETL</span><span class="pill">Power BI</span><span class="pill">SQL</span>
-        </a>
+        <!-- KPMG -->
+        <article class="exp-card fade">
+          <img class="exp-logo" src="kpmg.png" alt="KPMG" onerror="this.style.display='none'">
+          <div class="exp-body">
+            <h3>AI & ESG Project Consultant <span class="exp-company">KPMG</span></h3>
+            <p class="exp-meta">Sep 2024 – Fév 2025 · 6 mois · Paris, France</p>
+            <p class="exp-tags">RAG · NLP · ESG</p>
+            <ul>
+              <li>Solution RAG ESG (CSRD, CSDDD, GRI) avec ingestion multi-sources & embeddings.</li>
+              <li>Réponses traçables avec citations, score de risque & alertes.</li>
+              <li>CI/CD & monitoring qualité des réponses.</li>
+            </ul>
+          </div>
+        </article>
 
-        <a class="card lift fade" href="#" target="_blank" rel="noopener">
-          <h3>Logistique Portuaire</h3>
-          <p>Tableaux de bord KPIs & recommandations d’optimisation (-15% délais).</p>
-          <span class="pill">Power BI</span><span class="pill">Data Viz</span>
-        </a>
+        <!-- Idus Capital -->
+        <article class="exp-card fade">
+          <img class="exp-logo" src="idus.png" alt="Idus Capital" onerror="this.style.display='none'">
+          <div class="exp-body">
+            <h3>Data Scientist-engineer — Internship <span class="exp-company">Idus Capital</span></h3>
+            <p class="exp-meta">Avr 2024 – Sep 2024 · 6 mois · Casablanca</p>
+            <p class="exp-tags">Python · SQL · ETL</p>
+            <ul>
+              <li>Pipelines ETL automatisés (données financières volumineuses).</li>
+              <li>Modèles prédictifs (opportunités & signaux de risque).</li>
+              <li>Analyses & visualisations (Power BI) pour les métiers.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ANP -->
+        <article class="exp-card fade">
+          <img class="exp-logo" src="anp.png" alt="Agence Nationale des Ports" onerror="this.style.display='none'">
+          <div class="exp-body">
+            <h3>Data analyst <span class="exp-company">Agence Nationale des Ports</span></h3>
+            <p class="exp-meta">Juin 2023 – Sep 2023 · 4 mois · Agadir, Maroc</p>
+            <p class="exp-tags">SQL · Power BI · KPI</p>
+            <ul>
+              <li>Dashboards logistiques portuaires.</li>
+              <li>Réduction des délais de 15% (goulots d’étranglement).</li>
+              <li>Recommandations d’optimisation des flux.</li>
+            </ul>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section alt">
+  <!-- PROJECTS (Kaggle) -->
+  <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">Compétences</h2>
-      <div class="skills">
-        <div>
-          <h4>Programmation</h4>
-          <p>Python (PyTorch, TensorFlow, Pandas, NumPy, scikit-learn, PySpark), SQL, R</p>
-        </div>
-        <div>
-          <h4>IA & ML</h4>
-          <p>NLP, Computer Vision, CNN/RNN/Transformers, LLMs, RAG, Fine-tuning</p>
-        </div>
-        <div>
-          <h4>Données & Cloud</h4>
-          <p>ETL, MySQL, BigQuery, GCP, traitement de données massives</p>
-        </div>
-        <div>
-          <h4>Visualisation</h4>
-          <p>Power BI, Tableau, Matplotlib, Plotly, Spotfire, Looker Studio</p>
-        </div>
-        <div>
-          <h4>Méthodo</h4>
-          <p>Agile (Scrum), Git, CI/CD</p>
-        </div>
+      <h2 class="section-title">Projets Kaggle</h2>
+      <p class="lead" style="margin-bottom:18px">Une sélection de notebooks/compétitions Kaggle en analyse de données, Machine Learning et Deep Learning.</p>
+
+      <div class="kaggle-grid">
+
+        <!-- Titanic -->
+        <a class="kcard lift fade" href="https://www.kaggle.com/c/titanic" target="_blank" rel="noopener">
+          <div class="kicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 17h16v2H4v-2zm1-4h6v2H5v-2zm0-4h10v2H5V9zm0-4h8v2H5V5zm14 8h-2V5h2v8z"/></svg>
+          </div>
+          <div class="kbody">
+            <h3>Titanic — Binary Classification</h3>
+            <p>Feature engineering, validation croisée, modèles de base → stacking léger.</p>
+            <div class="kpills"><span class="pill">Pandas</span><span class="pill">XGBoost</span><span class="pill">CV</span></div>
+          </div>
+        </a>
+
+        <!-- House Prices -->
+        <a class="kcard lift fade" href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="noopener">
+          <div class="kicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v10h-5v-6H11v6H6V11H3l9-8z"/></svg>
+          </div>
+          <div class="kbody">
+            <h3>House Prices — Regression</h3>
+            <p>Imputation, encodage, log-target, RF/XGB/LGBM, stacking/blending.</p>
+            <div class="kpills"><span class="pill">LightGBM</span><span class="pill">CatBoost</span><span class="pill">Stacking</span></div>
+          </div>
+        </a>
+
+        <!-- Digit Recognizer -->
+        <a class="kcard lift fade" href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="noopener">
+          <div class="kicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+          </div>
+          <div class="kbody">
+            <h3>Digit Recognizer — CNN (MNIST)</h3>
+            <p>CNN conv→BN→ReLU, data aug, early stopping.</p>
+            <div class="kpills"><span class="pill">PyTorch</span><span class="pill">CNN</span><span class="pill">Augmentation</span></div>
+          </div>
+        </a>
+
+        <!-- Disaster Tweets -->
+        <a class="kcard lift fade" href="https://www.kaggle.com/c/nlp-getting-started" target="_blank" rel="noopener">
+          <div class="kicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v10H5.17L4 15.17V4zm0 14h12v2H4v-2z"/></svg>
+          </div>
+          <div class="kbody">
+            <h3>Disaster Tweets — NLP</h3>
+            <p>Cleaning + TF-IDF + modèles linéaires → fine-tuning DistilBERT.</p>
+            <div class="kpills"><span class="pill">NLP</span><span class="pill">TF-IDF</span><span class="pill">Transformers</span></div>
+          </div>
+        </a>
+
+        <!-- Dog Breed -->
+        <a class="kcard lift fade" href="https://www.kaggle.com/c/dog-breed-identification" target="_blank" rel="noopener">
+          <div class="kicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l4 4-4 4-4-4 4-4zm0 6l4 4-4 4-4-4 4-4zm0 8l4 4-4 4-4-4 4-4z"/></svg>
+          </div>
+          <div class="kbody">
+            <h3>Dog Breed — Transfer Learning</h3>
+            <p>Transfert (ResNet/EfficientNet), mixup, TTA.</p>
+            <div class="kpills"><span class="pill">Vision</span><span class="pill">Transfer</span><span class="pill">TTA</span></div>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -194,6 +228,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
