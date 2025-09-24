@@ -116,6 +116,75 @@ body{
 .skills h4{ margin:0 0 6px }
 .skills p{ margin:0; color:#d7def2 }
 
+
+/* ====== EXPERIENCES ====== */
+.exp-list{
+  display: grid;
+  gap: 16px;
+}
+
+.exp-card{
+  display: grid;
+  grid-template-columns: 90px 1fr;         /* logo à gauche, contenu à droite */
+  align-items: start;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.exp-logo{
+  width: 72px;
+  height: 72px;
+  object-fit: contain;                     /* garde le ratio du logo */
+  background: #fff1;                       /* léger fond si logo transparent */
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.exp-body h3{
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.exp-company{
+  color: #cfd6ff;
+  font-weight: 700;
+}
+
+.exp-meta{
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.exp-tags{
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #cfd6ff;
+}
+
+.exp-body ul{
+  padding-left: 18px;
+  margin: 0;
+}
+.exp-body li{
+  margin: 6px 0;
+  color: #d7def2;
+}
+
+/* responsive: empiler sur mobile */
+@media (max-width: 640px){
+  .exp-card{
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+  .exp-logo{ width:56px; height:56px; }
+}
+
+
 /* CONTACT */
 .contact-grid{
   display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -149,6 +218,7 @@ body{
 }
 body.light .nav{ background: rgba(255,255,255,.7) }
 body.light .btn.ghost{ color:#141821 }
+
 
 
 
